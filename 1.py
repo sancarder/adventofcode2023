@@ -26,12 +26,26 @@ def runCode(data):
 
     #a list of numbers
     for line in data:
-        number = ''
+        print(line)
+        number1 = ''
+
         for char in line:
             if char.isdigit():
-                number+=char
-        numbers.append(number)
+                number1+=char
+                break
 
+        rev = ''.join(reversed(line))
+        print(rev)
+
+        for c in rev:
+            print(c)
+            if c.isdigit():
+                number1+=c
+                break
+
+        numbers.append(int(number1))
+
+        print(numbers)
     total = sum(numbers)
     return total
 
